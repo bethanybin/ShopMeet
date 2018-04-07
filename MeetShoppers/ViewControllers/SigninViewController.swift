@@ -27,6 +27,14 @@ class SigninViewController : UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onSignup(_ sender: UIButton) {
+        performSegue(withIdentifier: "signupSegue", sender: nil)
+    }
+    
+    @IBAction func onSignin(_ sender: UIButton) {
+    
+    }
+    
     /*
     // MARK: - Navigation
 

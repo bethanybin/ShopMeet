@@ -29,7 +29,7 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func onSignup(_ sender: UIButton) {
-    
+        performSegue(withIdentifier: "signupSegue", sender: nil)
     }
 }
 
