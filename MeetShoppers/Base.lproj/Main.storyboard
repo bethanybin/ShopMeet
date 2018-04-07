@@ -227,7 +227,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXF-3K-Ll0" customClass="BottomBorderedTextField" customModule="MeetShoppers" customModuleProvider="target">
-                                <rect key="frame" x="55" y="248" width="249" height="30"/>
+                                <rect key="frame" x="55" y="250" width="249" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
@@ -303,7 +303,7 @@
         <image name="username-icon" width="25" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pLH-PO-NdN"/>
-        <segue reference="tbF-lh-h42"/>
+        <segue reference="Izv-sT-nom"/>
+        <segue reference="2V3-xr-ypw"/>
     </inferredMetricsTieBreakers>
 </document>
