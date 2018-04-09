@@ -20,6 +20,9 @@
 		BF56E9D52077CB0300D89184 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56E9D42077CB0300D89184 /* SignupViewController.swift */; };
 		BF56E9D92077DEB800D89184 /* ColorHexable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56E9D82077DEB800D89184 /* ColorHexable.swift */; };
 		BF56E9DB2077E3B200D89184 /* BottomBorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56E9DA2077E3B200D89184 /* BottomBorderedTextField.swift */; };
+		BF992F0F20792C3200828AB1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF992F0E20792C3200828AB1 /* GoogleService-Info.plist */; };
+		BF992F1020792C3200828AB1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF992F0E20792C3200828AB1 /* GoogleService-Info.plist */; };
+		BF992F1120792C3200828AB1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF992F0E20792C3200828AB1 /* GoogleService-Info.plist */; };
 		C70AE8CE96DC3AB84CEB0708 /* Pods_MeetShoppers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7612ADC570680EE0AF03A9E5 /* Pods_MeetShoppers.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +67,7 @@
 		BF56E9D42077CB0300D89184 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		BF56E9D82077DEB800D89184 /* ColorHexable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexable.swift; sourceTree = "<group>"; };
 		BF56E9DA2077E3B200D89184 /* BottomBorderedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBorderedTextField.swift; sourceTree = "<group>"; };
+		BF992F0E20792C3200828AB1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CECE193B5CAB097E9E615006 /* Pods-MeetShoppersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetShoppersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeetShoppersTests/Pods-MeetShoppersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFCED5EA4BCDE33AF8F5FF1B /* Pods_MeetShoppersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetShoppersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3154FDBCE430EF545FDFE22 /* Pods-MeetShoppers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetShoppers.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetShoppers/Pods-MeetShoppers.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 				7B13FB0E204906B80046D4D8 /* Assets.xcassets */,
 				7B13FB10204906B80046D4D8 /* LaunchScreen.storyboard */,
 				7B13FB13204906B80046D4D8 /* Info.plist */,
+				BF992F0E20792C3200828AB1 /* GoogleService-Info.plist */,
 			);
 			path = MeetShoppers;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B13FB12204906B80046D4D8 /* LaunchScreen.storyboard in Resources */,
+				BF992F0F20792C3200828AB1 /* GoogleService-Info.plist in Resources */,
 				7B13FB0F204906B80046D4D8 /* Assets.xcassets in Resources */,
 				7B13FB0D204906B80046D4D8 /* Main.storyboard in Resources */,
 			);
@@ -327,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF992F1020792C3200828AB1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF992F1120792C3200828AB1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,11 +387,19 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MeetShoppers/Pods-MeetShoppers-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

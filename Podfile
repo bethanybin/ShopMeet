@@ -7,6 +7,10 @@ target 'MeetShoppers' do
 
   # Pods for MeetShoppers
   pod 'AlamofireImage', '~> 3.3'
+  pod 'Firebase/Core' 
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database' 
+  pod 'Firebase/Storage'
 
   target 'MeetShoppersTests' do
     inherit! :search_paths
