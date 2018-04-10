@@ -140,9 +140,14 @@ class SignupViewController: UIViewController, UITextFieldDelegate, UIImagePicker
                 if let image = self.profileImage, let imageData = UIImageJPEGRepresentation(image, 1.0) {
                     self.uploadProfileImageToFirebaseStorage(data: imageData)
                 }
+                
+                // debugging
+                self.displayMessageDialog(title: "Success", message: "You have successfully signed up a new account.")
             }
         }
     }
+    
+    
     
     @IBAction func onSignin(_ sender: UIButton) {
         performSegue(withIdentifier: "signinSegue", sender: nil)
@@ -172,6 +177,8 @@ class SignupViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(alert, animated: false, completion: nil)
     }
+    
+    
     
     func displayMessageDialog(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)

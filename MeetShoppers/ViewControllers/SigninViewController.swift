@@ -63,6 +63,28 @@ class SigninViewController : UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    // Send email for resetting password
+    @IBAction func onForgotPassword(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Reset Password", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Enter", style: .default, handler: { (_) in
+            alert.dismiss(animated: false, completion: nil)
+            if let emailToSend = alert.textFields?[0].text {
+                Auth.auth().sendPasswordReset(withEmail: emailToSend, completion: { (error) in
+                    if let error = error as NSError? {
+                        self.displayMessageDialog(title: "Failure", message: "There was a problem when trying to send password reset instructions to this email address. Please make sure this email address has been registered.")
+                    } else {
+                        self.displayMessageDialog(title: "Success", message: "An email has been sent to your email to reset your password.")
+                    }
+                })
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in }))
+        alert.addTextField { (textField) in
+            textField.placeholder = "Enter Email"
+        }
+        self.present(alert, animated: false, completion: nil)
+    }
+    
     @IBAction func onSignup(_ sender: UIButton) {
         performSegue(withIdentifier: "signupSegue", sender: nil)
     }
@@ -99,7 +121,8 @@ class SigninViewController : UIViewController, UITextFieldDelegate {
                     self.displayMessageDialog(title: "Unknown Error", message: "Please try again.")
                 }
             } else {
-                
+                // debugging
+                self.displayMessageDialog(title: "Success", message: "You have successfully logged in.")
             }
         }
     }
