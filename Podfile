@@ -11,6 +11,8 @@ target 'MeetShoppers' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database' 
   pod 'Firebase/Storage'
+  pod 'Alamofire'
+  pod 'AlamofireObjectMapper'
 
   target 'MeetShoppersTests' do
     inherit! :search_paths

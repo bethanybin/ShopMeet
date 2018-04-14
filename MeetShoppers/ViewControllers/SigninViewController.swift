@@ -17,6 +17,7 @@ class SigninViewController : UIViewController, UITextFieldDelegate {
     @IBOutlet weak var signinView: UIView!
     @IBOutlet weak var logoImageView: UIImageView!
     
+    var email: String?
     var profileImage: UIImage?
     var signinViewOriginalCenter: CGPoint!
     
@@ -36,6 +37,10 @@ class SigninViewController : UIViewController, UITextFieldDelegate {
         
         // Initialize original center of sign in view
         signinViewOriginalCenter = signinView.center
+        
+        if let email = email {
+            emailTextField.text = email 
+        }
     }
     
     // Push sign in view to top when user starts editing in text fields
@@ -121,8 +126,7 @@ class SigninViewController : UIViewController, UITextFieldDelegate {
                     self.displayMessageDialog(title: "Unknown Error", message: "Please try again.")
                 }
             } else {
-                // debugging
-                self.displayMessageDialog(title: "Success", message: "You have successfully logged in.")
+                self.performSegue(withIdentifier: "mainSegue", sender: nil)
             }
         }
     }
@@ -133,7 +137,6 @@ class SigninViewController : UIViewController, UITextFieldDelegate {
         self.present(alert, animated: false, completion: nil)
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -141,5 +144,4 @@ class SigninViewController : UIViewController, UITextFieldDelegate {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
 }
