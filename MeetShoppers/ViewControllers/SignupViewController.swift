@@ -141,13 +141,12 @@ class SignupViewController: UIViewController, UITextFieldDelegate, UIImagePicker
                     self.uploadProfileImageToFirebaseStorage(data: imageData)
                 }
                 
-                // debugging
-                self.displayMessageDialog(title: "Success", message: "You have successfully signed up a new account.")
+                self.performSegue(withIdentifier: "signinSegue", sender: nil)
+                let alert = UIAlertController(title: "Success", message: "You have successfully signed in. Please log in to to enjoy the unique shopping experience.", preferredStyle: UIAlertControllerStyle.alert)
+                self.present(alert, animated: false, completion: nil)
             }
         }
     }
-    
-    
     
     @IBAction func onSignin(_ sender: UIButton) {
         performSegue(withIdentifier: "signinSegue", sender: nil)
@@ -178,8 +177,6 @@ class SignupViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         self.present(alert, animated: false, completion: nil)
     }
     
-    
-    
     func displayMessageDialog(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
@@ -197,14 +194,15 @@ class SignupViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         picker.dismiss(animated: false, completion: nil)
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        // Pass the selected object to the new view
+        if segue.identifier == "signinSegue" {
+            let vc = segue.destination as! SigninViewController
+            vc.email = self.emailTextField.text!
+        }
     }
-    */
-
 }
